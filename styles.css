@@ -45,7 +45,6 @@ button { cursor: pointer; }
 
 .menu {
     display: grid;
-    grid-template-rows: 1fr repeat(10, 0.5fr);
     gap: 1rem;
 }
 
