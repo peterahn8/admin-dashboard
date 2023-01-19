@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="script.js" defer></script>
+
 </head>
+
 <body>
 
     <div id="container">
@@ -32,25 +36,48 @@
         </div>
 
         <div id="sidebar">
-            <div id="dashboard">
-                <button class="dash">Dashboard</button>
-            </div>
             <div class="menu">
-                <ul>
-                    <li><button class="dash">Home</button></li>
-                    <li><button class="dash">Profile</button></li>
-                    <li><button class="dash">Messages</button></li>
-                    <li><button class="dash">History</button></li>
-                    <li><button class="dash">Tasks</button></li>
-                    <li><button class="dash">Communities</button></li>
-                </ul>
-            </div>
-            <div class="menu">
-                <ul>
-                    <li><button class="dash">Settings</button></li>
-                    <li><button class="dash">Support</button></li>
-                    <li><button class="dash">Privacy</button></li>
-                </ul>
+                <button class="big dash">
+                    <span class="material-icons md-36">dashboard</span>
+                    <span class="buttonText">Dashboard</span>
+                </button>
+                <button class="dash">
+                    <span class="material-icons">home</span>
+                    <span class="buttonText">Home</span>
+                </button>
+                <button class="dash">
+                    <span class="material-icons">face</span>
+                    <span class="buttonText">Profile</span>
+                </button>
+                <button class="dash">
+                    <span class="material-icons">chat_bubble</span>
+                    <span class="buttonText">Messages</span>
+                </button>
+                <button class="dash">
+                    <span class="material-icons">history</span>
+                    <span class="buttonText">History</span>
+                </button>
+                <button class="dash">
+                    <span class="material-icons">task</span>
+                    <span class="buttonText">Tasks</span>
+                </button>
+                <button class="dash">
+                    <span class="material-icons">groups</span>
+                    <span class="buttonText">Communities</span>
+                </button>
+                <div id="empty"></div>
+                <button class="dash">
+                    <span class="material-icons">settings</span>
+                    <span class="buttonText">Settings</span>
+                </button>
+                <button class="dash">
+                    <span class="material-icons">info</span>
+                    <span class="buttonText">Support</span>
+                </button>
+                <button class="dash">
+                    <span class="material-icons">security</span>
+                    <span class="buttonText">Privacy</span>
+                </button>
             </div>
         </div>
 
@@ -59,7 +86,9 @@
                 <div class="card">
                     <div class="cardContent">
                         <div>Super Cool Project</div>
-                        <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam omnis quos fugiat modi velit exercitationem labore assumenda optio eligendi? Dolor, odio quasi ducimus quidem aliquam quo ex eos beatae fugit!</div>
+                        <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam omnis quos fugiat modi
+                            velit exercitationem labore assumenda optio eligendi? Dolor, odio quasi ducimus quidem
+                            aliquam quo ex eos beatae fugit!</div>
                         <div class="cardActions">
                             <button>favorite</button>
                             <button>follow</button>
@@ -86,8 +115,9 @@
                 </div>
             </div>
         </div>
-        
+
     </div>
 
 </body>
+
 </html>
