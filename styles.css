@@ -5,7 +5,7 @@
 
 @font-face {
     font-family: Roboto;
-    src: url(fonts/Roboto-Light.ttf);
+    src: url(fonts/Roboto-Regular.ttf);
 }
 
 html {
@@ -47,6 +47,41 @@ button { cursor: pointer; }
 
 #headerTop > label {
     justify-self: end;
+}
+
+#headerTop > #search {
+    margin-left: -1rem;
+    margin-right: 5rem;
+}
+
+#headerBot {
+    display: grid;
+    grid-template-columns: 1fr 6fr 4fr;
+    align-items: center;
+    gap: 1rem;
+}
+
+#headerBot > .profIcon {
+    justify-self: end;
+}
+
+#headerBot > #greeting {
+    display: grid;
+}
+
+#greeting > :nth-child(1) {
+    font-weight: bolder;
+}
+#greeting > :nth-child(2) {
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+#actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4rem;
+    justify-self: center;
 }
 
 #sidebar {
