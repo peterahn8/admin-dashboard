@@ -25,9 +25,8 @@ button { cursor: pointer; }
 
 #container {
     display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-template-rows: repeat(5, 1fr);
-    height: 100vh;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 10fr;
 }
 
 #header {
@@ -89,7 +88,7 @@ button { cursor: pointer; }
     grid-row: 1 / -1;
     padding: 1rem;
     display: grid;
-    grid-template-rows: 0.25fr .5fr 1fr;
+    grid-template-rows: 1fr 1fr repeat(6, .5fr) 1fr repeat(3, .5fr) 8fr;
 }
 
 .menu {
@@ -114,5 +113,60 @@ button { cursor: pointer; }
 #main {
     border: 2px solid rgb(255, 0, 0);
     grid-row: 2 / -1;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+    padding: 1rem;
 }
 
+#projects {
+    display: grid;
+    grid-row: 1 / -1;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.1fr;
+    gap: 1rem;
+}
+
+#projects > :nth-child(1) { grid-column: 1 / -1; }
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    border: 2px solid black;
+    padding: 2rem;
+}
+
+.card > :nth-child(1) { grid-column: 1 / -1; }
+
+.cardActions {
+    grid-row: -1 / -2;
+    grid-column: 1 / -1;
+    justify-self: end;
+    align-self: center;
+}
+
+#announcements {
+    display: grid;
+    grid-template-rows: 0.1fr;
+    gap: 1rem;
+}
+
+#newsCard {
+    border: 2px solid black;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 2rem;
+}
+
+#trending {
+    display: grid;
+    grid-template-rows: 0.1fr;
+}
+
+#trendCard {
+    border: 2px solid black;
+    display: grid;
+    padding: 2rem;
+}
