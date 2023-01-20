@@ -33,6 +33,20 @@ button { cursor: pointer; }
 #header {
     border: 2px solid rgb(255, 255, 255);
     grid-column: 2 / -1;
+    display: grid;
+    padding: 1rem;
+}
+
+#headerTop {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 10fr 1fr 1fr 2fr;
+    justify-content: center;
+    align-items: center;
+}
+
+#headerTop > label {
+    justify-self: end;
 }
 
 #sidebar {
