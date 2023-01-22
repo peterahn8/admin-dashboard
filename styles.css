@@ -18,17 +18,23 @@ body * {
     list-style-type: none;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+}
+
 button { cursor: pointer; }
 
 #container {
     display: grid;
     grid-template-columns: 1fr 5fr;
-    grid-template-rows: 1fr 10fr;
+    grid-template-rows: min-content min-content;
 }
 
 #header {
     border: 2px solid rgb(34, 255, 0);
     grid-column: 2 / -1;
+    grid-row: 1 / 2;
     display: grid;
     padding: 1rem;
 }
@@ -84,7 +90,7 @@ button { cursor: pointer; }
 #sidebar {
     border: 2px solid rgb(0, 102, 255);
     grid-row: 1 / -1;
-    padding: 2rem;
+    padding: 1rem;
     display: grid;
     grid-template-rows: 1fr 1fr repeat(6, .5fr) 1fr repeat(3, .5fr) 8fr;
 }
@@ -112,18 +118,18 @@ button { cursor: pointer; }
     border: 2px solid rgb(255, 0, 0);
     grid-row: 2 / -1;
     display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 2rem;
-    padding: 2rem;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: min-content min-content;
+    gap: 1rem;
+    padding: 1rem;
 }
 
 #projects {
     display: grid;
     grid-row: 1 / -1;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    grid-template-rows: min-content;
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: min-content 1fr 1fr 1fr;
+    gap: 1rem;
 }
 
 #projects > :nth-child(1) { grid-column: 1 / -1; }
@@ -133,7 +139,7 @@ button { cursor: pointer; }
     grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content min-content;
     border: 2px solid black;
-    padding: 2rem;
+    padding: 1rem;
 }
 
 .card > :nth-child(1) { grid-column: 1 / -1; }
@@ -148,41 +154,45 @@ button { cursor: pointer; }
 #announcements {
     display: grid;
     grid-template-rows: min-content;
-    gap: 2rem;
+    gap: 1rem;
+    grid-row: 1 / 2;
 }
 
 #newsCard {
     border: 2px solid black;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
-    padding: 2rem;
+    padding: 1rem;
     gap: 1rem;
 }
 
-#newsCard > :nth-child(1) {
+/* #newsCard > :nth-child(1) {
     border-bottom: 1px solid gray;
 }
 
 #newsCard > :nth-child(2) {
     border-bottom: 1px solid gray;
-}
+} */
 
 #trending {
     display: grid;
-    grid-template-rows: min-content;
-    gap: 2rem;
+    grid-column: 2 / -1;
+    grid-row: 2 / -1;
+    grid-template-rows: min-content min-content min-content min-content;
+    gap: 1rem;
 }
 
 #trendCard {
     display: grid;
+    grid-template-rows: min-content;
 }
 
 #trendBox {
     border: 2px solid black;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    padding: 2rem;
-    gap: 2rem;
+    grid-template-rows: min-content;
+    padding: 1rem;
+    gap: 1rem;
 }
 
 .trendUser {
