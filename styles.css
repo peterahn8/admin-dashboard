@@ -30,7 +30,8 @@ body * {
     margin: 0;
     padding: 0;
     list-style-type: none;
-    color: var(--200);
+    color: var(--300);
+    font-size: 1rem;
 }
 
 body {
@@ -64,16 +65,21 @@ button:active {
 
 }
 
+h1 {
+    font-size: 2rem;
+}
+
 #container {
     display: grid;
-    grid-template-columns: 1fr 5fr;
-    grid-template-rows: 1fr 10fr;
+    grid-template-columns: 1fr 6fr;
+    grid-template-rows: min-content min-content;
 }
 
 .card,
 #newsCard,
 #trendBox {
-    border: 5px solid var(--orange);
+    border: .25rem solid var(--orange);
+    border-radius: 10px;
 }
 
 #header {
@@ -94,6 +100,11 @@ button:active {
 
 #headerTop > label {
     justify-self: end;
+}
+
+.username {
+    background-color: rgba(255, 255, 255, 0);
+    font-weight: bolder;
 }
 
 #search {
@@ -143,6 +154,13 @@ button:active {
     justify-self: center;
 }
 
+#actions > button {
+    border-radius: 15px;
+    width: 100px;
+    height: 40px;
+    font-weight: bolder;
+}
+
 #sidebar {
     grid-row: 1 / -1;
     padding: 2rem;
@@ -164,7 +182,11 @@ button:active {
     font-weight: bolder;
 }
 
-.big.dash { font-size: 36px; }
+.big.dash > .buttonText { font-size: 2rem; }
+
+button.big.dash {
+    background-color: var(--700);
+}
 
 .dash > .material-icons { justify-self: center; }
 
@@ -184,8 +206,8 @@ button:active {
 #projects {
     display: grid;
     grid-row: 1 / -1;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    grid-template-rows: min-content;
+    grid-template-columns: repeat(auto-fill, minmax(300px, max-content));
+    grid-template-rows: repeat(auto-fit, minmax(0, max-content));
     gap: 2rem;
 }
 
@@ -194,9 +216,9 @@ button:active {
 .card {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: min-content min-content;
-    border-radius: 10px;
+    grid-template-rows: repeat(auto-fit, minmax(0, max-content));
     padding: 2rem;
+    padding-bottom: -2rem;
 }
 
 .card > :nth-child(1) { grid-column: 1 / -1; }
@@ -206,11 +228,12 @@ button:active {
     grid-column: 1 / -1;
     justify-self: end;
     align-self: center;
+    margin-top: 1rem;
 }
 
 #announcements {
     display: grid;
-    grid-template-rows: min-content;
+    grid-template-rows: repeat(auto-fit, minmax(0, max-content));
     gap: 2rem;
 }
 
@@ -219,19 +242,21 @@ button:active {
     grid-template-rows: 1fr 1fr 1fr;
     padding: 2rem;
     gap: 1rem;
+    grid-row: 2 / -1;
 }
 
 #newsCard > :nth-child(1) {
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid var(--orange);
 }
 
 #newsCard > :nth-child(2) {
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid var(--orange);
 }
 
 #trending {
     display: grid;
-    grid-template-rows: min-content;
+    grid-template-rows: repeat(auto-fit, minmax(0, max-content));
+    grid-row: 2 / -1;
     gap: 2rem;
 }
 
@@ -241,9 +266,9 @@ button:active {
 
 #trendBox {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    grid-row: 2 / -1;
     padding: 2rem;
-    gap: 2rem;
 }
 
 .trendUser {
