@@ -18,6 +18,10 @@ body * {
     list-style-type: none;
 }
 
+body {
+    margin: 0;
+}
+
 button { cursor: pointer; }
 
 #container {
