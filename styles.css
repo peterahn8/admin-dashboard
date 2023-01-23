@@ -1,3 +1,17 @@
+:root {
+    --50: #f8fafc;
+    --100: #f1f5f9;
+    --200: #e2e8f0;
+    --300: #cbd5e1;
+    --400: #94a3b8;
+    --500: #64748b;
+    --600: #475569;
+    --700: #334155;
+    --800: #1e293b;
+    --900: #0f172a;
+    --orange: rgba(222, 93, 53, 0.8);
+}
+
 .material-icons.md-18 { font-size: 18px; }
 .material-icons.md-24 { font-size: 24px; }
 .material-icons.md-36 { font-size: 36px; }
@@ -16,13 +30,39 @@ body * {
     margin: 0;
     padding: 0;
     list-style-type: none;
+    color: var(--200);
 }
 
 body {
     margin: 0;
+    background-color: var(--700);
 }
 
-button { cursor: pointer; }
+button {
+    background-color: #de5d35;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    opacity: 0.8;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+button:hover {
+    z-index: 1;
+    color: white;
+    opacity: 1;
+}
+
+button:active {
+    position: relative;
+    left: 1px;
+    top: 1px;
+
+}
 
 #container {
     display: grid;
@@ -30,11 +70,17 @@ button { cursor: pointer; }
     grid-template-rows: 1fr 10fr;
 }
 
+.card,
+#newsCard,
+#trendBox {
+    border: 5px solid var(--orange);
+}
+
 #header {
-    border: 2px solid rgb(34, 255, 0);
     grid-column: 2 / -1;
     display: grid;
     padding: 1rem;
+    background-color: var(--700);
 }
 
 #headerTop {
@@ -50,9 +96,18 @@ button { cursor: pointer; }
     justify-self: end;
 }
 
-#headerTop > #search {
+#search {
     margin-left: -1rem;
     margin-right: 5rem;
+    background-color: var(--600);
+    border-radius: 5px;
+    border: none;
+    height: 2rem;
+    padding: 5px 10px 5px 10px;
+}
+
+#search {
+    outline: none;
 }
 
 #headerBot {
@@ -64,6 +119,9 @@ button { cursor: pointer; }
 
 #headerBot > .profIcon {
     justify-self: end;
+    border-radius: 100px;
+    height: 75px;
+    width: 75px;
 }
 
 #headerBot > #greeting {
@@ -86,11 +144,11 @@ button { cursor: pointer; }
 }
 
 #sidebar {
-    border: 2px solid rgb(0, 102, 255);
     grid-row: 1 / -1;
     padding: 2rem;
     display: grid;
     grid-template-rows: 1fr 1fr repeat(6, .5fr) 1fr repeat(3, .5fr) 8fr;
+    background-color: var(--700);
 }
 
 .menu {
@@ -113,13 +171,14 @@ button { cursor: pointer; }
 .dash > .buttonText { justify-self: start; }
 
 #main {
-    border: 2px solid rgb(255, 0, 0);
     grid-row: 2 / -1;
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 2rem;
     padding: 2rem;
+    background-color: var(--600);
+    border-radius: 20px 0px 0px 0px;
 }
 
 #projects {
@@ -136,7 +195,7 @@ button { cursor: pointer; }
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content min-content;
-    border: 2px solid black;
+    border-radius: 10px;
     padding: 2rem;
 }
 
@@ -156,7 +215,6 @@ button { cursor: pointer; }
 }
 
 #newsCard {
-    border: 2px solid black;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     padding: 2rem;
@@ -182,7 +240,6 @@ button { cursor: pointer; }
 }
 
 #trendBox {
-    border: 2px solid black;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     padding: 2rem;
@@ -193,6 +250,7 @@ button { cursor: pointer; }
     display: grid;
     grid-template-columns: 1fr 3fr;
     grid-template-rows: 1fr 1fr;
+    background-color: var(--600);
 }
 
 .trendUser > :nth-child(1) {
